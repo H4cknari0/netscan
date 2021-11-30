@@ -24,7 +24,13 @@ It's created for only /24 networks but we are developing this tool thought multi
 You can find more info of its usage in the help command; netscan --help.
 
 @@@@@@@@@@@@@@@@@@@@@@@@
-@Update date 30/11/2021@
+@Update date 25/11/2021@
 @@@@@@@@@@@@@@@@@@@@@@@@
 
-We have included an option to include /16 networks. We execute the command like before but at the end we have an option to choose between /16 and /24 networks
+We have included an option to scan /16 networks. We execute the command like before but at the end we have an option to choose between /16 and /24 networks
+
+@@@@@@@@@@@@@@@@@@@@@@@@
+@Update date 30/11/2021@
+@@@@@@@@@@@@@@@@@@@@@@@@
+ 
+We have included an option to scan /16 networks. We execute the command like before but at the end we have an option to choose between /16, /24 and /25 networks
