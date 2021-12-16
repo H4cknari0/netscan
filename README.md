@@ -34,3 +34,12 @@ We have included an option to scan /16 networks. We execute the command like bef
 @@@@@@@@@@@@@@@@@@@@@@@@
  
 We have included an option to scan /16 networks. We execute the command like before but at the end we have an option to choose between /16, /24 and /25 networks
+
+@@@@@@@@@@@@@@@@@@@@@@@@
+@Update date 16/12/2021@
+@@@@@@@@@@@@@@@@@@@@@@@@
+
+We have fixed some bugs from the app and we have included completely the range promissed, we can scan between /16 and /30 networks.
+We are working to update the performance of this app including new programming languajes
+
+Merry Christmas and a Happy New Year for all of you!!!!
