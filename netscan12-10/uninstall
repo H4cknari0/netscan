@@ -1,0 +1,24 @@
+#!/bin/bash
+
+rm -r /opt/netscan/
+
+path=$(echo $PATH | tr ':' ' ' | awk '{print$1}')
+
+rm "$path"'/netscan'
+rm "$path"'/tiempo'
+rm "$path"'/escaneo16'
+rm "$path"'/escaneo17'
+rm "$path"'/escaneo18'
+rm "$path"'/escaneo19'
+rm "$path"'/escaneo20'
+rm "$path"'/escaneo21'
+rm "$path"'/escaneo22'
+rm "$path"'/escaneo23'
+rm "$path"'/escaneo24'
+rm "$path"'/escaneo25'
+rm "$path"'/escaneo26'
+rm "$path"'/escaneo27'
+rm "$path"'/escaneo28'
+rm "$path"'/escaneo29'
+rm "$path"'/escaneo30'
+

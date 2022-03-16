@@ -1,0 +1,30 @@
+#!/bin/bash
+contador=2
+dir_netscan='/'$(find / -name escaneoenbarra24.sh 2>/dev/null | tr '/' ' ' | awk '{print$1}')''
+while [ "$dir2_netscan" != "netscan" ]; do
+dir2_netscan=$(find / -name escaneoenbarra24.sh 2>/dev/null | tr '/' ' ' | awk '{print$'$contador'}')
+
+dir_netscan=''$dir_netscan'/'$dir2_netscan''
+contador=$(($contador+1))
+done
+if [ "$dir_netscan" != "/opt/netscan" ]; then
+cp -r $dir_netscan /opt/
+fi
+
+tiempo=$(find /opt/ -name tiempo.sh 2>/dev/null | tr '\n' ' ' | awk '{print$1}')
+netscan=$(find /opt/ -name netscan.sh 2>/dev/null | tr '\n' ' ' | awk '{print$1}')
+ayuda=$(find /opt/ -name ayuda-escaneo.txt 2>/dev/null | tr '\n' ' ' | awk '{print$1}')
+escaneo16=$(find /opt/ -name escaneoenbarra16.sh 2>/dev/null | tr '\n' ' ' | awk '{print$1}')
+escaneo24=$(find /opt/ -name escaneoenbarra24.sh 2>/dev/null | tr '\n' ' ' | awk '{print$1}')
+
+
+path=$(echo $PATH | tr ':' ' ' | awk '{print$1}')
+
+ln -s "$netscan" "$path"'/netscan'
+ln -s "$tiempo" "$path"'/tiempo'
+ln -s "$escaneo16" "$path"'/escaneo16'
+ln -s "$escaneo24" "$path"'/escaneo24'
+
+
+netscan -I
+

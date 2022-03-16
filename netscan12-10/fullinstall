@@ -1,0 +1,54 @@
+#!/bin/bash
+contador=2
+dir_netscan='/'$(find / -name escaneoenbarra24.sh 2>/dev/null | tr '/' ' ' | awk '{print$1}')''
+while [ "$dir2_netscan" != "netscan" ]; do
+dir2_netscan=$(find / -name escaneoenbarra24.sh 2>/dev/null | tr '/' ' ' | awk '{print$'$contador'}')
+
+dir_netscan=''$dir_netscan'/'$dir2_netscan''
+contador=$(($contador+1))
+done
+if [ "$dir_netscan" != "/opt/netscan" ]; then
+cp -r $dir_netscan /opt/
+fi
+
+tiempo=$(find /opt/ -name tiempo.sh 2>/dev/null | tr '\n' ' ' | awk '{print$1}')
+netscan=$(find /opt/ -name netscan.sh 2>/dev/null | tr '\n' ' ' | awk '{print$1}')
+ayuda=$(find /opt/ -name ayuda-escaneo.txt 2>/dev/null | tr '\n' ' ' | awk '{print$1}')
+escaneo16=$(find /opt/ -name escaneoenbarra16.sh 2>/dev/null | tr '\n' ' ' | awk '{print$1}')
+escaneo17=$(find /opt/ -name escaneoenbarra17.sh 2>/dev/null | tr '\n' ' ' | awk '{print$1}')
+escaneo18=$(find /opt/ -name escaneoenbarra18.sh 2>/dev/null | tr '\n' ' ' | awk '{print$1}')
+escaneo19=$(find /opt/ -name escaneoenbarra19.sh 2>/dev/null | tr '\n' ' ' | awk '{print$1}')
+escaneo20=$(find /opt/ -name escaneoenbarra20.sh 2>/dev/null | tr '\n' ' ' | awk '{print$1}')
+escaneo21=$(find /opt/ -name escaneoenbarra21.sh 2>/dev/null | tr '\n' ' ' | awk '{print$1}')
+escaneo22=$(find /opt/ -name escaneoenbarra22.sh 2>/dev/null | tr '\n' ' ' | awk '{print$1}')
+escaneo23=$(find /opt/ -name escaneoenbarra23.sh 2>/dev/null | tr '\n' ' ' | awk '{print$1}')
+escaneo24=$(find /opt/ -name escaneoenbarra24.sh 2>/dev/null | tr '\n' ' ' | awk '{print$1}')
+escaneo25=$(find /opt/ -name escaneoenbarra25.sh 2>/dev/null | tr '\n' ' ' | awk '{print$1}')
+escaneo26=$(find /opt/ -name escaneoenbarra26.sh 2>/dev/null | tr '\n' ' ' | awk '{print$1}')
+escaneo27=$(find /opt/ -name escaneoenbarra27.sh 2>/dev/null | tr '\n' ' ' | awk '{print$1}')
+escaneo28=$(find /opt/ -name escaneoenbarra28.sh 2>/dev/null | tr '\n' ' ' | awk '{print$1}')
+escaneo29=$(find /opt/ -name escaneoenbarra29.sh 2>/dev/null | tr '\n' ' ' | awk '{print$1}')
+escaneo30=$(find /opt/ -name escaneoenbarra30.sh 2>/dev/null | tr '\n' ' ' | awk '{print$1}')
+
+path=$(echo $PATH | tr ':' ' ' | awk '{print$1}')
+
+ln -s "$netscan" "$path"'/netscan'
+ln -s "$tiempo" "$path"'/tiempo'
+ln -s "$escaneo16" "$path"'/escaneo16'
+ln -s "$escaneo17" "$path"'/escaneo17'
+ln -s "$escaneo18" "$path"'/escaneo18'
+ln -s "$escaneo19" "$path"'/escaneo19'
+ln -s "$escaneo20" "$path"'/escaneo20'
+ln -s "$escaneo21" "$path"'/escaneo21'
+ln -s "$escaneo22" "$path"'/escaneo22'
+ln -s "$escaneo23" "$path"'/escaneo23'
+ln -s "$escaneo24" "$path"'/escaneo24'
+ln -s "$escaneo25" "$path"'/escaneo25'
+ln -s "$escaneo26" "$path"'/escaneo26'
+ln -s "$escaneo27" "$path"'/escaneo27'
+ln -s "$escaneo28" "$path"'/escaneo28'
+ln -s "$escaneo29" "$path"'/escaneo29'
+ln -s "$escaneo30" "$path"'/escaneo30'
+
+netscan -I
+

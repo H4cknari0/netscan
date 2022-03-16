@@ -1,0 +1,39 @@
+netscan 0.1.1 (alpha)
+A command that scans and prints the IP into a LAN network and their OS.
+
+USAGE:
+    netscan [NETWORK IP] [OPTION] [OPTION]...
+
+OPTIONS:
+    -h, --help      Shows this message.
+    -H          Shows this message
+    -T, --time      Display the time of the execution.
+    -O          Display the OS of the machine view.
+
+At the end you could choose between different netmasks
+
+RANGE:
+    16          To scan /16 networks
+    17          To scan /17 networks
+    18          To scan /18 networks
+    19          To scan /19 networks
+    20          To scan /20 networks
+    21          To scan /21 networks
+    22          To scan /22 networks
+    23          To scan /23 networks
+    24          To scan /24 networks
+    25          To scan /25 networks
+    26          To scan /26 networks
+    27          To scan /27 networks
+    28          To scan /28 networks
+    29          To scan /29 networks
+    30          To scan /30 networks
+
+
+#################################################################################################
+#												#
+#			Thank's for installing this software					#
+#												#
+#			Created by: H4cknari0							#
+#												#
+#################################################################################################

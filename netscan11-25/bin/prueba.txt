@@ -1,0 +1,15 @@
+#!/bin/bash
+read -p "Selecciona una opcion [16-30]: " netmask
+case $netmask in
+
+	16)clear
+		echo "Hola 16"
+		;;
+	17)clear
+		echo "Hola 17"
+		;;
+	18)clear
+		echo "Hola 18"
+		;;
+	*)echo $netmask "not valid parameter"
+esac
