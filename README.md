@@ -10,8 +10,6 @@
 
 INSTALLATION:
 
-To install this software is recommended to decompress into your opt directory.
-
 The installation process is only execute the fullinstall script and when it finishes you would see the installation is completed.
 
 
